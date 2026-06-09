@@ -146,4 +146,5 @@ label Fase1:
     show c celebrar
     c "Es todo por el día de hoy, recuerda comenzar a usar estas técnicas, veras que serán de bastante utilidad. Te espero en la próxima sesión."
 
+    hide c
     jump Finale1

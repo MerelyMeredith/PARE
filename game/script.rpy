@@ -5,7 +5,8 @@ define e = Character(NombreEjemplar)
 define Gender = ""
 
 
-label Start:
+label start:
+    scene bg Vacio
     menu:
         "Genero?"
 
@@ -43,6 +44,8 @@ label Menu:
 label Finale1:
     jump Menu
 
+label Finale2:
+    jump Menu
 
 # Acciones de Guia:
 # saluda
@@ -60,3 +63,5 @@ label Finale1:
 # enojar
 # triste
 # decidirse
+# leer
+# feliz
