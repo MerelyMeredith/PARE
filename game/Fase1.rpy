@@ -4,7 +4,7 @@ label Fase1:
     "Te damos la bienvenida a este proceso el cual se ha elaborado para darte a conocer nuevas formas de afrontar tus problemas asi como algunos pensamientos y sentimientos negativos, que a todo mundo nos Ilegan a aparecer en algunos momentos de nuestras vidas."
     
     # 2
-    scene bg Salon
+    scene bg salon
     show c saluda
     c "Hola, soy [NombreGuia], tengo 13 años de edad y al igual que tu estudio la secundaría, hace unos meses hice este curso y me ha gustado mucho, por 10 que soy voluntaria para acompañarte en este proceso."
 
@@ -36,7 +36,7 @@ label Fase1:
     c "Acompañame al siguiente capítulo de esta sesión."
 
     # 12
-    scene bg Parque
+    scene bg parque
     show c sonreir
     # TODO: cambiar genero a neutro o crear palabras con diferente genero
     c "Sabes, yo no soy muy tranquila, pero cuando aprendí a relajarme, pude enfrentar mejor a mis problemas.„"

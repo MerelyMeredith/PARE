@@ -4,7 +4,7 @@ label Fase2:
     #READ: texto inutilizado "En la siguiente sección podrás seleccionar entre varías respuestas, para conocerlas, solo presiona sobre cada opción que aparecerá en el menú de la derecha, cuando las conozcas, entonces das click en la palomita correspondiente a tu selección."
 
     # 2
-    scene bg Salon
+    scene bg salon
     show c enojar
     c "..."
 
@@ -357,5 +357,4 @@ label eleccion11_5_start:
     show c sonreir
     c "Te espero en la próxima. Hasta luego!!!"
 
-    hide c
     jump Finale2

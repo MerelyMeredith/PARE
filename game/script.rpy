@@ -1,12 +1,23 @@
 ﻿define NombreGuia = "GUIA"
-define NombreEjemplar = "EJEMPLAR"
 define c = Character(NombreGuia)
-define e = Character(NombreEjemplar)
+
+define NombreEjemplar1 = "EJEMPLAR1"
+define e = Character(NombreEjemplar1)
+
+define NombreEjemplar2 = "EJEMPLAR2"
+define ee = Character(NombreEjemplar2)
+
+define NpcFem = "Compañera"
+define npcF = Character(NpcFem)
+
+define Profesor = "Profesor"
+define prof = Character(Profesor)
+
 define Gender = ""
 
 
 label start:
-    scene bg Vacio
+    scene bg vacio
     menu:
         "Genero?"
 
@@ -20,6 +31,7 @@ label start:
             $ Gender = "Otro"
 
 label Menu:
+    scene bg vacio
     menu:
         "Capitulo?"
 
@@ -47,6 +59,9 @@ label Finale1:
 label Finale2:
     jump Menu
 
+label Finale3:
+    jump Menu
+
 # Acciones de Guia:
 # saluda
 # piensa
@@ -65,3 +80,7 @@ label Finale2:
 # decidirse
 # leer
 # feliz
+# dormir
+# incomodo
+# alienado
+# alagado
