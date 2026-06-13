@@ -61,6 +61,9 @@ label Finale2:
 
 label Finale3:
     jump Menu
+    
+label Finale4:
+    jump Menu
 
 # Acciones de Guia:
 # saluda
