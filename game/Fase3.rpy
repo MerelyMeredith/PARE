@@ -35,7 +35,7 @@ label Fase3:
 
 label eleccion111_1_start:
     menu:
-        "¿qué hago?"
+        c "¿qué hago?"
 
         "Estudiar mi parte.":
             # 3b
@@ -205,7 +205,7 @@ label eleccion111_3_final:
     c "Umm, tengo que llegar por las verduras que dijo mi mamá, no podría cargar con dos mochilas y las verduras, no quiero hacer eso..."
 
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "No voy a cargar tus cosas para que tú te diviertas, no soy una mula.":
             # 8a
@@ -243,7 +243,7 @@ label eleccion111_4_final:
     show npcF sonreir at right
     npcF "¿En serio...?, ándale es que ya nos vamos y me voy a ver muy mal con la mochila en el centro comercial, mis amigas ya encargaron la suya, anda no seas malo"
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "De verdad, hoy no puedo hacerlo, por favor busca otra opción.":
             # 9
@@ -274,7 +274,7 @@ label eleccion111_5_final:
     show npcF carisma at right
     npcF "Umm, si quieres, yo te hago las compras de tu mamá para que no des la vuelta al mercado y tú me cargas mi mochila, te llevo pronto el mandado, no te preocupes."
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "Está bien, pero no tardes mucho pues mi mamá se enojaría mucho.":
             # 8c
@@ -305,7 +305,7 @@ label eleccion111_6_final:
     show npcF burla at right
     npcF "Umm... como te tiene tu mamá, de seguro es muy regañona o tu muy miedoso"
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "No decir nada, aceptar la mochila de la compañera.":
             # 8c
@@ -355,7 +355,7 @@ label eleccion111_7_final:
     show prof saludar at right
     prof "Hola Siegfried antes de que te vayas te quiero felicitar por tu gran trabajo en ciencias naturales, una compañera tuya 10 hizo casi también como tú, los dos irán al concurso."
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "Muchas gracias profesor.":
             # 15a
@@ -398,7 +398,7 @@ label eleccion111_8_final:
     e "Siegfried, me entere que iremos al concurso."
     c "Entonces eras tú, eI maestro no me dijo quien era."
     menu:
-        "¿qué le digo?"
+        c "¿qué le digo?"
 
         "Creo que hiciste un trabajo excelente.":
             jump eleccion111_9_final
