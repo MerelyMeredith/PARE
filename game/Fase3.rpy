@@ -33,7 +33,7 @@ label Fase3:
     show c piensa
     c "Tengo que irme a las 7:45 para la escuela y así llegar a tiempo..."
 
-label eleccion111_1_start:
+label Fase3Eleccion1_Inicio:
     menu:
         c "¿qué hago?"
 
@@ -45,7 +45,7 @@ label eleccion111_1_start:
             # 3e
             show c sonreir
             c "Cuando elegimos el comportamiento asertivo respetamos nuestros derechos y sentimientos."
-            jump eleccion111_1_final
+            jump Fase3Eleccion2_Inicio
 
         "Esperar quizá llegue en este momento y él no ha estudiado tampoco.":
             # 3c
@@ -54,14 +54,14 @@ label eleccion111_1_start:
 
             # 3d
             c "Ummm... ¿Qué es el comportamiento pasivo? EI comportamiento pasivo es cuando hacemos algo que niega nuestros propios derechos y/o sentimientos. Bueno, como no los conocías volvamos a tomar la decisión."
-            jump eleccion111_1_start
+            jump Fase3Eleccion1_Inicio
 
-label eleccion111_2_start:
+label Fase3Eleccion2_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_1_final
+    jump Fase3Eleccion2_Inicio
 
-label eleccion111_1_final:
+label Fase3Eleccion2_Inicio:
     # 4
     scene bg Comedor
     show c calma
@@ -90,7 +90,7 @@ label eleccion111_1_final:
             show ee calma at right
             "Siegfried y John se van a la escuela pero Siegfried no se siente nada bien con John ni consigo mismo."
             c "creo que esto no es 10 que deseo para mí."
-            jump eleccion111_2_start
+            jump Fase3Eleccion2_Fail
 
         "Pero qué te pasa, encima que llegas tarde, pasa por mí como si nada, jamás trabajaremos en equipo de nuevo, no se puede ser más flojo.":
             # 4b
@@ -109,7 +109,7 @@ label eleccion111_1_final:
             show ee incomodo at right
             "Siegfriedy John se van a la escuela, pero ambos no pueden dejar de sentirse incomodos."
             c "creo que esto no es lo que deseo para mí."
-            jump eleccion111_2_start
+            jump Fase3Eleccion2_Fail
 
         "Te he esperado desde las 7:00 como acordamos, me hubiera gustado que al menos me hubieras avisado que llegarías tarde, fue algo molesto para mí.":
             # 4c
@@ -121,14 +121,14 @@ label eleccion111_1_final:
             scene bg puerta
             show ee decepcion
             ee "Tienes razón reconozco que te hice daño sin querer al no avisarte, déjame compensarlo de alguna forma..."
-            jump eleccion111_2_final
+            jump Fase3Eleccion3_Inicio
             
-label eleccion111_3_start:
+label Fase3Eleccion3_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_2_final
+    jump Fase3Eleccion3_Inicio
 
-label eleccion111_2_final:
+label Fase3Eleccion3_Inicio:
     # 5
     scene bg cancha
     show c sonreir
@@ -151,7 +151,7 @@ label eleccion111_2_final:
             show fase3grafico2 at left
             show fase3grafico3 at right
             "Siegfried ha logrado jugar en el campo pero ataco a dos niños de quienes se burlaron y empezaron a llamar con apodos por su corta estatura. Comportamiento agresivo: la persona actúa sobre los derechos de los demás, menosprecia a otros, puede lograr sus metas, pero lastima a los demás."
-            jump eleccion111_3_start
+            jump Fase3Eleccion3_Fail
 
         "No sé si jugaré bien, si elijo y no juego bien, mejor será que me pongan en la posición en la que crean mejor.":
             # 6b
@@ -163,7 +163,7 @@ label eleccion111_2_final:
             # 6e
             show ee triste at left
             "Siegfried no podrá jugar en el campo como quería, se siente triste y quizá algo humillado... Quizá creen que soy muy malo, quizá es por mi altura. Ellos saben más de futbol que yo. Comportamiento pasivo: la persona deja que los demás decidan por ella, difícilmente logra la meta deseada."
-            jump eleccion111_3_start
+            jump Fase3Eleccion3_Fail
 
         "Quiero jugar en el campo, me propondré para jugar donde quiero, así me divertiré.":
             # 6c
@@ -181,14 +181,14 @@ label eleccion111_2_final:
             show ee alagado at right
             c "si me divertí mucho aunque al final por cansancio jugué también en la portería."
             "Comportamiento asertivo: La persona se valora así misma, se expresa, decide por sí misma y tiene más posibilidades de lograr la meta deseada."
-            jump eleccion111_3_final
+            jump Fase3Eleccion4_Inicio
             
-label eleccion111_4_start:
+label Fase3Eleccion4_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_3_final
+    jump Fase3Eleccion4_Inicio
 
-label eleccion111_3_final:
+label Fase3Eleccion4_Inicio:
     # 7
     scene bg salon
     show c sonreir
@@ -211,32 +211,32 @@ label eleccion111_3_final:
             # 8a
             show c enojar
             "Respuesta agresiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion4_Fail
 
         "Lo siento, pero realmente hoy no puedo hacer eso.":
             # 8b
             show c explicar
             "Respuesta asertiva"
-            jump eleccion111_4_final
+            jump Fase3Eleccion5_Inicio
 
         "Hoy no podría hacerlo.":
             # 8b
             show c explicar
             "Respuesta asertiva"
-            jump eleccion111_4_final
+            jump Fase3Eleccion5_Inicio
 
         "Voy a batallar pero está bien, ya veré que hago.":
             # 8c
             show c incomodo at left
             "Respuesta pasiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion4_Fail
            
-label eleccion111_5_start:
+label Fase3Eleccion5_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_4_final
+    jump Fase3Eleccion5_Inicio
 
-label eleccion111_4_final:
+label Fase3Eleccion5_Inicio:
     # 8d
     scene bg salon
     show c incomodo at left
@@ -248,26 +248,26 @@ label eleccion111_4_final:
         "De verdad, hoy no puedo hacerlo, por favor busca otra opción.":
             # 9
             "En ocasiones las personas no están acostumbradas a aceptar una respuesta negativa. EI cambiar de opinión sin razones suficientes decae en falta de asertividad. Pero es importante saber que el aceptar un no como respuesta a una petición nuestra, es también ser asertivo, así como esperamos que respeten nuestros no, conlleva aceptar el no de los demás."
-            jump eleccion111_5_final
+            jump Fase3Eleccion6_Inicio
 
         "Bueno está bien, yo te ayudo, perdona por hacerme del rogar.":
             # 8c
             show c incomodo at left
             "Respuesta pasiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion5_Fail
 
         "Pero no entiendes ya te dije que no, no voy a cargar tus cosas para que tú te diviertas.":
             # 8a
             show c enojar
             "Respuesta agresiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion5_Fail
            
-label eleccion111_6_start:
+label Fase3Eleccion6_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_5_final
+    jump Fase3Eleccion6_Inicio
 
-label eleccion111_5_final:
+label Fase3Eleccion6_Inicio:
     # 10
     scene bg salon
     show c decepcion at left
@@ -280,25 +280,25 @@ label eleccion111_5_final:
             # 8c
             show c incomodo
             "Respuesta pasiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion6_Fail
 
         "Gracias por querer ayudarme, pero estaré bien.":
             # 11
             show c sonreir
-            jump eleccion111_6_final
+            jump Fase3Eleccion7_Inicio
 
         "Por favor, no seas fastidiosa.":
             # 8a
             show c enojar
             "Respuesta agresiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion6_Fail
 
-label eleccion111_7_start:
+label Fase3Eleccion7_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_6_final
+    jump Fase3Eleccion7_Inicio
 
-label eleccion111_6_final:
+label Fase3Eleccion7_Inicio:
     # 12
     scene bg salon
     show c decepcion at left
@@ -311,7 +311,7 @@ label eleccion111_6_final:
             # 8c
             show c incomodo
             "Respuesta pasiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion7_Fail
 
         "No me gusta lo que estás haciendo, hablaremos en otra ocasión":
             # 13
@@ -323,7 +323,7 @@ label eleccion111_6_final:
             hide npcF
             show c sonreir at center
             c "Gracias por apoyarme a resolver este caso."
-            jump eleccion111_7_final
+            jump Fase3Eleccion8_Inicio
 
         "Quiero que dejes de hacer eso, hablaremos en otra ocasión.":
             # 13
@@ -335,20 +335,20 @@ label eleccion111_6_final:
             hide npcF
             show c sonreir at center
             c "Gracias por apoyarme a resolver este caso."
-            jump eleccion111_7_final
+            jump Fase3Eleccion8_Inicio
         
         "Calla jamás volveré a hacerte un favor para que ni 10 pidas.":
             # 8a
             show c enojar
             "Respuesta agresiva"
-            jump eleccion111_4_start
+            jump Fase3Eleccion7_Fail
            
-label eleccion111_8_start:
+label Fase3Eleccion8_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_7_final
+    jump Fase3Eleccion8_Inicio
 
-label eleccion111_7_final:
+label Fase3Eleccion8_Inicio:
     # 15
     scene bg salon
     hide c
@@ -362,35 +362,35 @@ label eleccion111_7_final:
             show prof calma
             prof "Claro es merecido, hasta luego Siegfried"
             "(EI maestro se ve satisfecho)."
-            jump eleccion111_8_final
+            jump Fase3Eleccion9_Inicio
 
         "Mi compañera es muy aplicada, aunque yo no tanto.":
             # 15b
             show prof incomodo
             prof "Bueno hasta luego Siegfried."
             "(El maestro se ve triste)"
-            jump eleccion111_8_start
+            jump Fase3Eleccion8_Fail
 
         "Qué bueno escuchar que me fue bien.":
             # 15a
             show prof calma
             prof "Claro es merecido, hasta luego Siegfried"
             "(EI maestro se ve satisfecho)."
-            jump eleccion111_8_final
+            jump Fase3Eleccion9_Inicio
         
         "Bueno seguramente 10 hice mejor que mi compañera.":
             # 15c
             show prof desconcertado
             prof "Eeh bueno, nos vemos pronto Siegfried"
             "(EI maestro se ve sorprendido)."
-            jump eleccion111_8_start
+            jump Fase3Eleccion8_Fail
 
-label eleccion111_9_start:
+label Fase3Eleccion9_Fail:
     scene bg vacio
     # transicion a el pasado
-    jump eleccion111_8_final
+    jump Fase3Eleccion9_Inicio
 
-label eleccion111_8_final:
+label Fase3Eleccion9_Inicio:
     # 16
     scene bg salon2
     show c orgulloso at left
@@ -401,18 +401,18 @@ label eleccion111_8_final:
         c "¿qué le digo?"
 
         "Creo que hiciste un trabajo excelente.":
-            jump eleccion111_9_final
+            jump Fase3Eleccion9_Final
 
         "Tu investigación es muy buena.":
-            jump eleccion111_9_final
+            jump Fase3Eleccion9_Final
 
         "Enterate que el maestro dijo que mi tarea fue la mejor.":
-            jump eleccion111_9_start
+            jump Fase3Eleccion9_Fail
         
         "Tuve mucha suerte en hacer el trabajo, quizá el maestro se equivocó conmigo.":
-            jump eleccion111_9_start
+            jump Fase3Eleccion9_Fail
 
-label eleccion111_9_final:
+label Fase3Eleccion9_Final:
     # 17
     show c sonreir at left
     show e sonreir at right

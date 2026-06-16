@@ -108,14 +108,14 @@ label Fase4:
     # 18
     c "EI tiro no fue gol."
 
-label eleccion1111_1_fail:
+label Fase4Eleccion1_Fail:
     scene bg vacio
     # 18e
     "[NombreGuia] se ha dado cuenta de que un pensamiento negativo ha aparecido en su mente."
     # transicion a el pasado por fallar
-    jump eleccion1111_1_start
+    jump Fase4Eleccion1_Inicio
 
-label eleccion1111_1_start:
+label Fase4Eleccion1_Inicio:
     menu:
         c "EI tiro no fue gol."
 
@@ -123,34 +123,34 @@ label eleccion1111_1_start:
             # 18a
             "La autoestima de [NombreGuia] ha disminuido... \n"
             extend "Razón: Pensamiento todo o nada"
-            jump eleccion1111_1_fail
+            jump Fase4Eleccion1_Fail
 
         "Me van a cambiar pronto de posición, soy terrible para patear bien el balón.":
             # 18b
             "[NombreGuia] se siente angustiada... \n"
             extend "Razón: pensamiento de sobre generalización"
-            jump eleccion1111_1_fail
+            jump Fase4Eleccion1_Fail
 
         "Vamos a perder por mi culpa.":
             # 18c
             "La autoestima de [NombreGuia] ha disminuido... \n"
             extend "Razón: pensamiento Tipo filtro mental y auto culpa."
-            jump eleccion1111_1_fail
+            jump Fase4Eleccion1_Fail
 
         "Estuvo cerca para ser la primera vez que pateo el balón.":
             # 18c
             "[NombreGuia] se siente con más entusiasmo! \n"
             extend "Razón: pensamiento positivo."
-            jump eleccion111_1_final
+            jump Fase4Eleccion2_Inicio
 
-label eleccion1111_2_fail:
+label Fase4Eleccion2_Fail:
     scene bg vacio
     # 18e
     "[NombreGuia] se ha dado cuenta de que un pensamiento negativo ha aparecido en su mente."
     # transicion a el pasado por fallar
-    jump eleccion1111_2_start
+    jump Fase4Eleccion2_Inicio
 
-label eleccion1111_2_start:
+label Fase4Eleccion2_Inicio:
     # 19-1
     "Marcador final 2-2"
     e "Vaya, al final nos han empatado, fue un partido difícil."
@@ -162,27 +162,27 @@ label eleccion1111_2_start:
             # 19-1a
             "[NombreGuia] frustrada Y desanimada... \n"
             extend "Razón: uso de la palabra \"debería\"."
-            jump eleccion1111_2_fail
+            jump Fase4Eleccion2_Fail
 
         "Solo pude meter un gol para nada es el debut de una estrella.":
             # 19-1b
             "[NombreGuia] siente coraje contra sí misma... \n"
             extend "Razón: Descalificación de lo positivo, era su primera vez y aun así metió gol. Pensamiento todo o nada."
-            jump eleccion1111_2_fail
+            jump Fase4Eleccion2_Fail
 
         "Isell ha de pensar que empatamos por mi culpa.":
             # 19-1c
             "[NombreGuia] siente angustia y miedo de perder sus amistades... \n"
             extend "Razón: Pensamiento negativo \"leer la mente\"."
-            jump eleccion1111_2_fail
+            jump Fase4Eleccion2_Fail
 
         "Metí un gol seguramente mejoraré más si sigo jugando.":
             # 19-1d
             "[NombreGuia] se siente contenta y satisfecha. \n"
             extend "Razón: pensamiento positivo."
-            jump eleccion1111_2_final
+            jump Fase4Eleccion2_Final
 
-label eleccion1111_2_final
+label Fase4Eleccion2_Final:
     # 20
     c "Gracias por acompañarme, fue un día muy excitante, te espero en la próxima sesión!!!"
 
