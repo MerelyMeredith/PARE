@@ -48,7 +48,7 @@ label Fase1:
     # 14
     show c sonreir at left
     show e dormir at right
-    c "Mira, quiero que conozcas a mi compañera [NombreEjemplar]..."
+    c "Mira, quiero que conozcas a mi compañera [NombreEjemplar1]..."
 
     # 15
     show c callar at left
@@ -56,7 +56,7 @@ label Fase1:
 
     # 16
     show c gritar at left
-    c "[NombreEjemplar]!!!"
+    c "[NombreEjemplar1]!!!"
      
     # 17
     show c decepcion at left
