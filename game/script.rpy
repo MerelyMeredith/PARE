@@ -7,28 +7,31 @@ define e = Character(NombreEjemplar1)
 define NombreEjemplar2 = "EJEMPLAR2"
 define ee = Character(NombreEjemplar2)
 
+define NombreEjemplar3 = "EJEMPLAR3"
+define eee = Character(NombreEjemplar3)
+
 define NpcFem = "Compañera"
 define npcF = Character(NpcFem)
 
 define Profesor = "Profesor"
 define prof = Character(Profesor)
 
-define Gender = ""
-
-
 label start:
     scene bg vacio
     menu:
-        "Genero?"
+        "Genero"
 
         "Mujer.":
-            $ Gender = "Ella"
+            $ genero = fem
+            "[genero.suj]"
 
         "Hombre.":
-            $ Gender = "El"
+            $ genero = masc
+            "[genero.suj]"
 
-        "Otro.":
-            $ Gender = "Otro"
+        "No Binario.":
+            $ genero = neu
+            "[genero.suj]"
 
 label Menu:
     scene bg vacio

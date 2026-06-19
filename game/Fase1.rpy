@@ -1,21 +1,25 @@
 label Fase1:
     # 1
     "Hola."
-    "Te damos la bienvenida a este proceso el cual se ha elaborado para darte a conocer nuevas formas de afrontar tus problemas asi como algunos pensamientos y sentimientos negativos, que a todo mundo nos Ilegan a aparecer en algunos momentos de nuestras vidas."
+    "Te damos la bienvenida a este proceso, el cual se ha elaborado para darte a conocer nuevas formas de afrontar tus problemas, asi como algunos pensamientos y sentimientos negativos"
+    "Sentimientos que a todo mundo nos Ilegan a aparecer en algunos momentos de nuestras vidas."
     
     # 2
     scene bg salon
     show c saluda
-    c "Hola, soy [NombreGuia], tengo 13 años de edad y al igual que tu estudio la secundaría, hace unos meses hice este curso y me ha gustado mucho, por 10 que soy voluntaria para acompañarte en este proceso."
+    c "Hola, me llamo [NombreGuia]. Tengo 13 años, voy en secundaria y hace nada estuve exactamente en tu lugar. Completé todo esto y, la verdad, me sirvió tanto que me apunté para ser tu guía."
 
     # 3
     show c piensa
-    c "Sabías que los sentimientos negativos como el estrés, la preocupación, angustia o enojo. Pueden ser disminuidos con tu respiración..."
+    c "Mira, los sentimientos negativos, tipo: el estrés, la preocupación, angustia o enojo. Pueden ser dificiles, pero ayuda mucho constrolarlos con tu respiración..."
 
     # 4
     show c gracia
-    c "ilncreíble! ¿No es así? Pues se logra al usar la respiración como una forma de relajación, hay muchas formas, pero en este caso te compartiré una forma muy simple y eficiente de relajarte... Lo mejor de todo, no tendrás que pasar media hora escuchando al psicólogo mientras te cuenta algo... o mejor aún, ni siquiera 10 necesitaras, así que puedes usar este método en cualquier lugar y momento en que 10 necesites."
+    c "No soy todo palabras, Pues se logra al usar la respiración como una forma de relajación, hay muchas formas, pero en este caso una forma muy simple de relajarte"
+    show c carismatico
+    c "Lo mejor de todo, no tendrás que pasar media hora escuchando al psicólogo mientras te cuenta algo..."
 
+    # TODO continuar restructuracion y modernizacion del texto, refinar los 4 anteriores si es necesario
     # 5
     show c apuntaDerecha at left
     show fase1grafico1 at right
