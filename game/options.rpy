@@ -176,6 +176,16 @@ init python:
     ## **.ogg" matches ogg files in the game directory or any of its
     ## subdirectories, and "**.psd" matches psd files anywhere in the project.
 
+    ## Declares archives. An archive is a file in which other files can be placed
+    ## to hide them from the user and group them together. The first argument is 
+    ## the archive name without the .rpa extensionn, and the second is the 
+    ## distribution type it applies to ('all' applies to all distributions).
+
+    build.archive("scripts","all")
+    build.archive("images","all")
+    build.archive("audio","all")
+    build.archive("gui","all")
+
     ## Classify files as None to exclude them from the built distributions.
 
     build.classify('**~', None)
@@ -183,11 +193,39 @@ init python:
     build.classify('**/.**', None)
     build.classify('**/#**', None)
     build.classify('**/thumbs.db', None)
+    build.classify('**.psd', None)
+    build.classify('.git/**', None)
+
+    ## To protect script from casual viewing, exclude the plain-text .rpy
+    ## files from the distribution. Ren'Py compiles these into .rpyc files,
+    ## which are then included in the archive.
+
+    build.classify('game/**.rpy', None)
 
     ## To archive files, classify them as 'archive'.
 
-    # build.classify('game/**.png', 'archive')
-    # build.classify('game/**.jpg', 'archive')
+    build.classify('game/**.rpyc', 'scripts')
+
+    ## Grafic resources, such as images and fonts, can be classified as 'images'. This
+    ## will cause them to be placed in the images.rpa archive, and not be visible
+    build.classify('game/**.png', 'images')
+    build.classify('game/**.jpg', 'images')
+    build.classify('game/**.jpeg', 'images')
+    build.classify('game/**.webp', 'images')
+
+    ## Music and sound resources can be classified as 'audio'. This will cause them to be placed in the audio.rpa archive, and not be visible
+    build.classify('game/**.ogg', 'audio')
+    build.classify('game/**.mp3', 'audio')
+    build.classify('game/**.wav', 'audio')
+    build.classify('game/**.opus', 'audio')
+    build.classify('game/**.webm', 'audio')
+    build.classify('game/**.ogv', 'audio')
+    build.classify('game/**.mp4', 'audio')
+
+    ## GUI resorces can be classified as 'gui'. This will cause them to be placed in the gui.rpa archive, and not be visible
+    build.classify('game/gui/**', 'gui')
+    build.classify('game/**.ttf', 'gui')
+    build.classify('game/**.otf', 'gui')
 
     ## Files matching documentation patterns are duplicated in a mac app build,
     ## so they appear in both the app and the zip file.

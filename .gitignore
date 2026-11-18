@@ -24,3 +24,7 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+#key and settings local from the launcher
+*.keystore
+android.json 

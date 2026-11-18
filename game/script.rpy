@@ -17,7 +17,7 @@ define Profesor = "Profesor"
 define prof = Character(Profesor)
 
 label start:
-    scene bg vacio
+    # scene bg vacio
     menu:
         "Genero"
 
@@ -34,7 +34,7 @@ label start:
             "[genero.suj]"
 
 label Menu:
-    scene bg vacio
+    # scene bg vacio
     menu:
         "Capitulo?"
 
